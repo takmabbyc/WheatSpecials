@@ -1,0 +1,23 @@
+﻿@model WheatSpecials.Models.Database.WheatBeer
+@{
+    ViewData["Title"] = "Beer";
+}
+
+<h1>@Model.Name</h1>
+
+<br />
+
+<p>
+    Alcohol: @Model.AlcoholPercentage %
+</p>
+
+<br />
+
+<img src="@Model.ImageUrl">
+
+<br />
+<br />
+
+<p>
+    @Model.Description
+</p>

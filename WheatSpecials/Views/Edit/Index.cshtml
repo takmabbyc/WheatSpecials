@@ -1,0 +1,33 @@
+﻿@model WheatSpecials.Models.Database.WheatBeer
+@{
+    ViewData["Title"] = "Edit beer";
+}
+
+<h1>Edit beer</h1>
+
+<form asp-controller="Edit" asp-action="Edit" asp-route-id=@Model.Id>
+    <div class="form-group" style="width:500px;">
+
+        <label for="itemname">Beer name</label>
+        <br />
+        <input value="@Model.Name" autocomplete="off" name="itemname" type="text" class="form-control" id="itemname" aria-describedby="itemname" placeholder="Enter name">
+        <br />
+
+        <label for="description">Beer description</label>
+        <br />
+        <input value="@Model.Description" autocomplete="off" name="description" type="text" class="form-control" id="description" aria-describedby="description" placeholder="Enter description">
+        <br />
+
+        <label for="percentage">Beer alcohol percentage</label>
+        <br />
+        <input value="@Model.AlcoholPercentage" autocomplete="off" name="percentage" type="text" class="form-control" id="percentage" aria-describedby="percentage" placeholder="Enter alcohol percentage">
+        <br />
+
+        <label for="image">Externally hosted beer image</label>
+        <br />
+        <input value="@Model.ImageUrl" autocomplete="off" name="image" type="text" class="form-control" id="image" aria-describedby="image" placeholder="Enter image URL">
+        <br />
+
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+</form>
